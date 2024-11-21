@@ -1,0 +1,147 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header general (base.html) */
+header {
+    background-color: #165e9d;  /* Azul vibrante */
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.3em;
+}
+
+/* Header específico para index.html */
+header.index-header {
+    background-color: #0f355a;  /* Azul más oscuro */
+    color: white;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para el formulario */
+.form-container-index {
+    background-color: #eeefef;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del formulario (ajustar todos los inputs) */
+.form-container-index input[type="number"],
+.form-container-index input[type="text"],
+.form-container-index input[type="email"] {
+    width: 90%;  /* Asegura que todos los campos de entrada tengan el mismo ancho */
+    padding: 12px;
+    font-size: 1.2em;  /* Mayor tamaño de fuente para mejorar la legibilidad */
+    border: 2px solid #0f355a;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+.form-container-index input[type="number"]:focus,
+.form-container-index input[type="text"]:focus,
+.form-container-index input[type="email"]:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #00796b;  /* Verde atractivo */
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 90%;  /* Asegura que el botón ocupe el mismo ancho que los campos */
+}
+
+button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);  /* Efecto de botón en hover */
+}
+
+/* Estilo para los enlaces */
+a {
+    color: #00796b;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #eeefef;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #00796b;
+    color: white;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #312b2b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    /* Asegurar que los campos de entrada y el botón ocupen todo el ancho en pantallas pequeñas */
+    .form-container-index input[type="number"],
+    .form-container-index input[type="text"],
+    .form-container-index input[type="email"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.1em;
+    }
+}
