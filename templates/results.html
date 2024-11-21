@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <header class="index-header">
+        <h1>Resultado del Cálculo de Precio</h1>
+    </header>
+
+    <div class="container">
+        <div class="form-container-index">
+            <h2>El precio estimado de la propiedad es:</h2>
+            <!-- Mostrar el precio con formato de pesos y dos decimales -->
+            <p>${{ "{:,.2f}".format(precio) }}</p>
+            <a href="/" class="btn btn-primary">Volver al inicio</a>
+        </div>
+
+        <div class="charts-container">
+            <h3>Gráficos Generados</h3>
+
+            <div class="chart">
+                <h4>Histograma de las Características</h4>
+                <!-- Aquí se muestra el gráfico interactivo generado por Plotly -->
+                <div>{{ histograma|safe }}</div>
+            </div>
+
+            <div class="chart">
+                <h4>Matriz de Correlación</h4>
+                <!-- Aquí se muestra el gráfico interactivo de la matriz de correlación -->
+                <div>{{ matriz|safe }}</div>
+            </div>
+
+            <div class="chart">
+                <h4>Gráfico de Dispersión entre Área y Precio</h4>
+                <!-- Aquí se muestra el gráfico interactivo del gráfico de dispersión -->
+                <div>{{ dispersion|safe }}</div>
+            </div>
+
+            <div class="chart">
+                <h4>Boxplot de Precios</h4>
+                <!-- Aquí se muestra el gráfico interactivo del boxplot -->
+                <div>{{ boxplot|safe }}</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PascualBravo - Daniela Escobar - Luis Martinez - Henry Suarez</p>
+    </footer>
+{% endblock %}
